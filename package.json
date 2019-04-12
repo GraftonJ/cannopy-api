@@ -7,6 +7,9 @@
     "knex": "knex",
     "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run;",
   },
+  "engines": {
+    "node": "v11.2.0"
+  },
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -17,7 +20,5 @@
     "morgan": "~1.9.0",
     "pg": "^7.9.0"
   },
-  "engines": {
-    "node": "v11.2.0"
-  }
+  
 }

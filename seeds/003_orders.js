@@ -4,9 +4,15 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('orders').insert([
-        { id: 1, batches_id: 1, city: 'Denver', name: 'John Smith'},
-        { id: 2, batches_id: 2, city: 'Boulder', name: 'Jane Doe'},
-        { id: 3, batches_id: 3, city: 'Fort Collins', name: 'John Denver'}
+        { id: 1, batches_id: 1, city: 'Denver', name: 'The Joint'},
+        { id: 2, batches_id: 1, city: 'Denver', name: 'Lightshade'},
+        { id: 3, batches_id: 1, city: 'Denver', name: 'Altitude East Colfax'},
+        { id: 4, batches_id: 2, city: 'Boulder', name: 'The Joint Boulder'},
+        { id: 5, batches_id: 2, city: 'Boulder', name: 'Lightshade Boulder'},
+        { id: 6, batches_id: 3, city: 'Boulder', name: 'Altitude Boulder'},
+        { id: 7, batches_id: 3, city: 'Fort Collins', name: 'The Joint Fort Collins'},
+        { id: 8, batches_id: 3, city: 'Fort Collins', name: 'Lightshade Fort Collins'},
+        { id: 9, batches_id: 3, city: 'Fort Collins', name: 'Altitude Fort Collins'},
       ])
     })
     .then(function () {

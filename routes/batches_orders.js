@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 /* Get all the batches for a particular order id */
 router.get('/:id', (req, res, next) => {
   knex
-    .select('batches_orders.id as join_id', 'orders.city', 'orders.id as orders_id', 'orders.name', 'batches.type', 'batches.size', 'batches.strains_id', 'batches.id as batches_id')
+    .select('batches_orders.id as join_id', 'orders.city', 'orders.id as orders_id', 'orders.name', 'batches.type', 'batches.size', 'batches.strains_id', 'batches.quantity' 'batches.id as batches_id')
     .from('batches_orders')
     .innerJoin('orders', 'orders.id', 'batches_orders.orders_id')
     .innerJoin('batches', 'batches.id', 'batches_orders.batches_id')
